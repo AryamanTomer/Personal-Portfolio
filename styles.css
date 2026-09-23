@@ -618,3 +618,146 @@ footer a:visited { color: #00ffff; }
     .retro-nav a { font-size: 11px; }
     .guestbook-header { font-size: 22px; }
 }
+
+/* =========================
+   JAVASCRIPT RETRO EXTRAS
+========================= */
+
+.retro-js-panel {
+    margin: 22px 18px;
+    border: 7px ridge #00ffff;
+    background: #111;
+    box-shadow: 7px 7px 0 #ff00aa;
+}
+
+.retro-js-title {
+    padding: 9px;
+    text-align: center;
+    color: #000;
+    background: #fff600;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    border-bottom: 5px groove #fff;
+}
+
+.retro-js-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 14px;
+    background: repeating-linear-gradient(45deg, #000 0 12px, #101050 12px 24px);
+}
+
+.js-box {
+    padding: 12px;
+    color: #00ff00;
+    background: #000;
+    border: 4px inset #888;
+    text-align: center;
+}
+
+.js-box.wide { grid-column: 1 / -1; }
+
+.js-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00ffff;
+    font-size: 11px;
+}
+
+.js-box strong {
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.js-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px;
+    background: #c0c0c0;
+    border-top: 4px ridge #fff;
+}
+
+.js-controls button {
+    padding: 9px 12px;
+    color: #000;
+    background: #e8e8e8;
+    border: 4px outset #fff;
+    font-family: "Courier New", monospace;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #000;
+}
+
+.js-controls button:nth-child(1) { background: #ff66cc; }
+.js-controls button:nth-child(2) { background: #00ffff; }
+.js-controls button:nth-child(3) { background: #fff600; }
+
+.js-controls button:active {
+    border-style: inset;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 #000;
+}
+
+.cursor-sparkle {
+    position: fixed;
+    z-index: 99999;
+    pointer-events: none;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    animation: sparkle-fall 700ms linear forwards;
+}
+
+@keyframes sparkle-fall {
+    0% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    100% { opacity: 0; transform: translate(-50%, 28px) scale(0.3) rotate(180deg); }
+}
+
+.party-mode { animation: page-hue 3s linear infinite; }
+@keyframes page-hue { to { filter: hue-rotate(360deg); } }
+
+.retro-alert {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 100000;
+    width: min(420px, calc(100% - 30px));
+    transform: translate(-50%, -50%);
+    color: #000;
+    background: #c0c0c0;
+    border: 6px outset #fff;
+    box-shadow: 10px 10px 0 rgba(0,0,0,.65);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.retro-alert-title {
+    padding: 6px 8px;
+    color: #fff;
+    background: #000080;
+    font-weight: 700;
+}
+
+.retro-alert-body {
+    padding: 18px;
+    background: #efefef;
+}
+
+.retro-alert button {
+    display: block;
+    min-width: 80px;
+    margin: 14px auto 0;
+    padding: 6px 12px;
+    border: 3px outset #fff;
+    background: #ddd;
+    font-weight: bold;
+}
+
+@media (max-width: 680px) {
+    .retro-js-grid { grid-template-columns: 1fr; }
+    .js-box.wide { grid-column: auto; }
+}

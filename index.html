@@ -303,8 +303,31 @@
             <section class="web-badges">
                 <div class="badge">HTML<br>4EVER</div>
                 <div class="badge badge2">CSS<br>POWER</div>
-                <div class="badge badge3">NO<br>JAVASCRIPT</div>
+                <div class="badge badge3">JAVASCRIPT<br>ENABLED</div>
                 <div class="badge badge4">100%<br>HUMAN</div>
+            </section>
+
+            <section class="retro-js-panel" aria-label="Old school JavaScript extras">
+                <div class="retro-js-title">★ LIVE INTERNET CONTROL PANEL ★</div>
+                <div class="retro-js-grid">
+                    <div class="js-box">
+                        <span class="js-label">LOCAL TIME</span>
+                        <strong id="digital-clock">--:--:--</strong>
+                    </div>
+                    <div class="js-box">
+                        <span class="js-label">LAST UPDATED</span>
+                        <strong id="last-updated">LOADING...</strong>
+                    </div>
+                    <div class="js-box wide">
+                        <span class="js-label">STATUS</span>
+                        <strong id="site-status">CONNECTING TO THE INFORMATION SUPERHIGHWAY...</strong>
+                    </div>
+                </div>
+                <div class="js-controls">
+                    <button type="button" id="randomize-colors">RANDOMIZE COLORS!</button>
+                    <button type="button" id="toggle-trail">TOGGLE CURSOR SPARKLES</button>
+                    <button type="button" id="guestbook-button">SIGN GUESTBOOK</button>
+                </div>
             </section>
 
         </main>
@@ -313,11 +336,12 @@
             <div class="rainbow-rule"></div>
             <p>★ © 2026 Aryaman Tomer ★</p>
             <p class="footer-small">Best viewed at 1024×768 with way too many colors.</p>
-            <p class="visitor-counter">VISITOR # <span>000042</span></p>
+            <p class="visitor-counter">VISITOR # <span id="visitor-count">000042</span></p>
             <p><a href="#home">[ BACK TO TOP ]</a></p>
         </footer>
 
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
